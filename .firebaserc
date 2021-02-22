@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mofood-74dfe": {
+      "hosting": {
+        "mofood": [
+          "mofood-74dfe"
+        ]
+      }
+    }
+  }
+}
