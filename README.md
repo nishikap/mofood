@@ -1,6 +1,6 @@
-# Mofood -- Online Food Ordering Web Application
+# Mofood -- Online Food Ordering Web Application 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
+Customer and restaurant friendly web application where customers can easily order and enjoy their favorite meals from various restaurants.
 
 ## Development server
 
