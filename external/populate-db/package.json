@@ -1,0 +1,15 @@
+{
+  "name": "popular-db",
+  "version": "1.0.0",
+  "description": "script to populate database for mofood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-admin": "^9.5.0",
+    "firestore-export-import": "^0.11.0"
+  }
+}

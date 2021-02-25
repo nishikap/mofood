@@ -1,0 +1,437 @@
+{
+    "restaurants": [
+        {
+            "id": 1,
+            "name": "kantipur Tandoori House",
+            "description": "Indian, Nepali, Asian",
+            "location": "Brahmakumari Marg, Jyatha, Kathmandu 44600, Nepal",
+            "phone": "9771458067",
+            "email": "kantipurtandoorihouse@gmail.com",
+            "available": true,
+            "pickupAvailable": true,
+            "deliveryAvailable": true,
+            "menuItems": [
+                {
+                    "id": 1,
+                    "name": "Paneer Chilli",
+                    "description": "Paneer fried with onion, tomato, capsicum, sauces and spices ",
+                    "price": 600,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 2,
+                    "name": "Tandoori Chicken",
+                    "description": "Tender chicken marinated in a spicy yogurt mixture and cooked in our tandoori oven",
+                    "price": 1100,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 3,
+                    "name": "Banana Splits",
+                    "description": "Three scoops of ice-cream, split banana top with nuts",
+                    "price": 200,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Dessert"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Fusion Himalaya Cafe and Restaurants",
+            "description": "Cafe, Indian, Asian",
+            "location": "Paknajol marg, Kathmandu",
+            "phone": "984-146-3455",
+            "email": "fusionhimalaya@gmail.com",
+            "available": false,
+            "pickupAvailable": true,
+            "deliveryAvailable": false,
+            "menuItems": [
+                {
+                    "id": 1,
+                    "name": "Cheese Naan",
+                    "description": "Pita bread with mozzarella cheese topped with cilantro ",
+                    "price": 500,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 2,
+                    "name": "Chicken Momo",
+                    "description": "Authentic Nepali dumplings served with two different sauce",
+                    "price": 900,
+                    "currencyType": "NRS",
+                    "available": false,
+                    "type": "Entre"
+                },
+                {
+                    "id": 3,
+                    "name": "Kheer",
+                    "description": "Rice pudding with almonds on top ",
+                    "price": 300,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Dessert"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "MarcoPolo Restaurant",
+            "description": "Italian, Mediterranean",
+            "location": "1st Floor, Chhaya Center Thamel,Kathmandu",
+            "phone": "984-846-2355",
+            "email": "marcopolo@gmail.com",
+            "available": false,
+            "pickupAvailable": true,
+            "deliveryAvailable": false,
+            "menuItems": [
+                {
+                    "id": 1,
+                    "name": "Spaghetti Carbonara",
+                    "description": "Spaghetti made with our special white sauce and cheese ",
+                    "price": 700,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 2,
+                    "name": "Marcopolo Pizza",
+                    "description": "House special pizza with marinated chicken,mushrooms, bell peppers, onions and tomato sauce as the toppings",
+                    "price": 1000,
+                    "currencyType": "NRS",
+                    "available": false,
+                    "type": "Entre"
+                },
+                {
+                    "id": 3,
+                    "name": "Panna Cotta Vanilla",
+                    "description": "Vanilla bean, heavy cream, mixed berries and gelatin mixed in a fine paste ",
+                    "price": 450,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Dessert"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Valley Xpress (Balaju)",
+            "description": "Snacks and Fast food, Other items",
+            "location": "Balaju, Kathmandu 44600, Nepal",
+            "phone": "97714385122",
+            "email": "vxpress@gmail.com",
+            "available": true,
+            "pickupAvailable": true,
+            "deliveryAvailable": true,
+            "menuItems": [
+                {
+                    "id": 1,
+                    "name": "Chicken Boneless Bucket",
+                    "description": "Fried boneless chicken with add-on flavors of different sauce ",
+                    "price": 999,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 2,
+                    "name": "Family Meal",
+                    "description": "8 pcs Fried Chicken, 6 pcs Boneless, 2 portion Chicken Popcorn, 2 French Fries, 1 Bottle Jumbo Coke",
+                    "price": 2499,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 3,
+                    "name": "Xpress Special",
+                    "description": "Whole Grilled Chicken, 8 pcs Chicken Wings, 2 French Fries, 6 pcs Boneless, 1 Bottle Jumbo Coke",
+                    "price": 2199,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 4,
+                    "name": "Chicken Burger",
+                    "description": "Cheddar Cheese, Chicken, lettuce, tomato, red onions, and pickles on a brioche bun",
+                    "price": 390,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 5,
+                    "name": "Chicken Burger",
+                    "description": "Cheddar Cheese, Chicken, Jalapeno, Creamy Sriracha Sauce, lettuce, tomato, red onions, and pickles on a brioche bun",
+                    "price": 420,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Casa Mexicana",
+            "description": "Mexican, Other Items",
+            "location": "Maitri Marg, Bakhundole, Lalitpur 44700, Nepal",
+            "phone": "97716215680",
+            "email": "casamexicanamarketing@gmail.com",
+            "available": true,
+            "pickupAvailable": true,
+            "deliveryAvailable": false,
+            "menuItems": [
+                {
+                    "id": 1,
+                    "name": "Totopos",
+                    "description": "Corn Chips served with refried beans and a touch of Spicy Garlic Salsa",
+                    "price": 400,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 2,
+                    "name": "Chilaquiles",
+                    "description": "Corn Chips served with Red salsa served with Cheese, Sour Cream and refried beans with choice of meat",
+                    "price": 650,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 3,
+                    "name": "Tinga Burritos",
+                    "description": "Shredded Chicken cooked with onions, tomatoes, green chillies and Mexican spices",
+                    "price": 750,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 4,
+                    "name": "Papas Sopes",
+                    "description": "Potatoes cooked with onion, Tomatoes and our special garlic salsa",
+                    "price": 550,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 5,
+                    "name": "Tres Leches Cake",
+                    "description": "Traditional Mexican Vanilla cake soaked in a three-milk mix, topped with whipping cream",
+                    "price": 300,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Dessert"
+                },
+                {
+                    "id": 6,
+                    "name": "Carlota",
+                    "description": "Multiple levels of vanilla cookies, covered in a sweet lime creamy sauce",
+                    "price": 170,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Dessert"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Wunjala Moskva",
+            "description": "Newari, Russian",
+            "location": "Sama Marga, Naxal, Kathmandu 44600, Nepal",
+            "phone": "97714415236",
+            "email": "wunjala@infoclub.com",
+            "available": true,
+            "pickupAvailable": true,
+            "deliveryAvailable": false,
+            "menuItems": [
+                {
+                    "id": 1,
+                    "name": "Samay Baji",
+                    "description": "Newari traditional platter with different dishes and spices including traditional pickles with your choice of meat or vegetable",
+                    "price": 400,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 2,
+                    "name": "Wunjala Momocha",
+                    "description": "Steamed stuffed dumplings with traditional Newari spices",
+                    "price": 550,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 3,
+                    "name": "Chatamari",
+                    "description": "Pancakes made of rice flour and white soya paste with toppings of your choice",
+                    "price": 450,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 4,
+                    "name": "Woh",
+                    "description": "Pancakes made out of freshly grounded black lentils with topping of your choice",
+                    "price": 400,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 5,
+                    "name": "Yomari",
+                    "description": "Steamed dumpling with external covering of rice flour with sweet filling",
+                    "price": 350,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Dessert"
+                },
+                {
+                    "id": 6,
+                    "name": "Piroski",
+                    "description": "4 pcs of stuffed, freshly baked homemade buns with choice of veg and non-veg stuff",
+                    "price": 350,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 7,
+                    "name": "Stolichny Salad",
+                    "description": "Salad prepared with potato, carrots, gherkins and chicken meat mixed with mayonnaise",
+                    "price": 399,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 8,
+                    "name": "Kotleti",
+                    "description": "Juicy, crispy and fried meat patties served with a side of mashed potatoes, pasta or buckwheat kasha",
+                    "price": 749,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Jimbu Thakali By Capital Grill",
+            "description": "Thakali, Nepali, Indian",
+            "location": "Gahana Pokhari Marga, Kathmandu 44600, Nepal",
+            "phone": "97714437674",
+            "email": "contact@jimbuthakali.com",
+            "available": true,
+            "pickupAvailable": true,
+            "deliveryAvailable": false,
+            "menuItems": [
+                {
+                    "id": 1,
+                    "name": "Mutton Sukuti Sadeko",
+                    "description": "Dried mutton mixed with assorted spices, onions, garlic, ginger, pepper",
+                    "price": 650,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 2,
+                    "name": "Jhol momo",
+                    "description": "Dumplings with your choice of meat, cooked into a broth with sesame seeds",
+                    "price": 370,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 3,
+                    "name": "Mushroom Chilli",
+                    "description": "Mushroom served with capsicum, tomato, onions and hot garlic sauce",
+                    "price": 425,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 4,
+                    "name": "Wood Fire Chhoila Buffalo Wings",
+                    "description": "Chicken wings and drumsticks baked in wood fire oven and marinated with classic newari spices",
+                    "price": 465,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 5,
+                    "name": "Thakali Chicken Thukpa(Ghetto)",
+                    "description": "Chicken noodle soup with traditional spices",
+                    "price": 465,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 6,
+                    "name": "Trout Jhol",
+                    "description": "A whole local Himalayan Trout cooked with local spices.",
+                    "price": 949,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 7,
+                    "name": "Pangra Fried",
+                    "description": "Gizzards pan fried and served with famous timmur ko chhop",
+                    "price": 310,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 8,
+                    "name": "Thakali Thali Set",
+                    "description": "rice and lentils served with different side dishes with authentic twist of the Himalayas with choice of Chicken, Fish, Mutton, and vegetables",
+                    "price": 475,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 9,
+                    "name": "Dhido Set",
+                    "description": "Boiled and stirred flour with various side dishes and authentic traditional spices with choice of meat",
+                    "price": 499,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 10,
+                    "name": "Juju Dhau",
+                    "description": "Traditionally prepared curd/yogurt on a clay pot",
+                    "price": 120,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Dessert"
+                }
+            ]
+        }
+    ]
+}
