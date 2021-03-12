@@ -1,0 +1,52 @@
+.home-main {
+  background-color: #f39189;
+  color: whitesmoke;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.home-search {
+  //   background-color: #b4aee8;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.restaurant-form {
+  min-width: 300px;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.restaurant-listing {
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+  padding: 18px;
+  //   background-color: #ffe3fe;
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.social-media-links {
+  background-color: #f39189;
+  ul {
+    img {
+      width: 64px;
+      height: 64px;
+    }
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+}

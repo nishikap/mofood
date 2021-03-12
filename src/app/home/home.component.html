@@ -1,0 +1,43 @@
+<div class="home-main">
+  <img src="../../assets/mofood-logo.png" alt="logo" />
+  <h3>"Enjoy your favorite meals at your doorstep 🤤"</h3>
+</div>
+
+<div class="home-search">
+<form class="restaurant-form">
+    <mat-form-field class="full-width">
+      <mat-label>Search for your favourite resturants here ...</mat-label>
+      <input type="text"
+             placeholder="search..."
+             matInput
+             [formControl]="restaurantsListControl"
+             [matAutocomplete]="auto">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</div>
+
+<div class="restaurant-listing">
+    <mat-card>
+        <img src="../../assets/res1.jpg" alt="">
+    </mat-card>
+    <mat-card>
+        <img src="../../assets/res2.jpg" alt="">
+    </mat-card>
+    <mat-card>
+        <img src="../../assets/res3.jpg" alt="">
+    </mat-card>
+</div>
+
+<div class="social-media-links">
+    <ul>
+        <li><img src="../../assets/fb.png" alt="fb link"></li>
+        <li><img src="../../assets/insta.png" alt="insta link"></li>
+        <li><img src="../../assets/twitter.png" alt="twitter link"></li>
+       
+    </ul>
+</div>
