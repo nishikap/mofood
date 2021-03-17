@@ -1,6 +1,6 @@
 <div class="container h-100">
     <div class="row align-items-center h-100">
-        <div class="col-12 mx-auto">
+        <div [formGroup]="registerForm" class="col-12 mx-auto">
             <div class="row justify-content-center">
                 <img src="../../assets/mofood-logo.png" alt="logo" />
             </div>
@@ -22,19 +22,19 @@
             <div class="row justify-content-center">
                 <mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>
-                    <input matInput placeholder="Enter your email">
+                    <input matInput formControlName="email" formControlplaceholder="Enter your email">
                 </mat-form-field>
             </div>
 
             <div class="row justify-content-center">
                 <mat-form-field appearance="outline">
                     <mat-label>Password</mat-label>
-                    <input matInput type="password" placeholder="Enter your password">
+                    <input matInput formControlName="password" type="password" placeholder="Enter your password">
                 </mat-form-field>
             </div>
 
             <div class="row justify-content-center">
-                <button mat-raised-button color="primary">Create Account</button>
+                <button mat-raised-button color="primary" (click)="signUp()">Create Account</button>
             </div>
         </div>
     </div>
