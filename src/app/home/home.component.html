@@ -3,7 +3,7 @@
   <div class="container">
     <h1 class="display-4"><img src="../../assets/mofood-logo.png" alt="logo" /></h1>
     <p class="lead">"Enjoy your favorite meals at your doorstep 🤤"</p>
-    <p class="lead">
+    <p class="lead" *ngIf="!isLoggedIn()">
       <a class="btn btn-primary btn-lg" role="button" href="/login">Get Started</a>
     </p>
   </div>
