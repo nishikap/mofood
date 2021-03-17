@@ -1,4 +1,40 @@
-.toolbar-style{
-    background-color:#630000; 
+.toolbar-style {
+    background-color: #630000;
     color: white;
+}
+
+.menu-spacer {
+    flex: 1 1 auto;
+}
+
+.no-padding {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.footer {
+    background-color: #810000;
+    margin: 0;
+    flex-shrink: none;
+
+    ul {
+        img {
+            width: 64px;
+            height: 64px;
+        }
+
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#page-content {
+    flex: 1 0 auto;
 }

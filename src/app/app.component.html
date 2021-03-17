@@ -1,18 +1,46 @@
 <mat-toolbar class="toolbar-style">
-    <mat-toolbar-row>
-        <h1>MoFood</h1>
-        <span class="menu-spacer"></span>
-        <div>
-            <a mat-button (click)="goToHome()"> Home </a>
-            <a mat-button (click)="goToLogin()"> Login </a>
-            <a mat-button (click)="goToRegister()"> Register </a>
-            <a mat-button (click)="goToCart()">Cart</a>
-            <a mat-button (click)="goToProfile()"> Profile</a>
+  <mat-toolbar-row>
+    <h1>MoFood</h1>
+    <div *ngIf="!isLoggedIn()">
+      <a mat-button (click)="goToHome()"> Home </a>
+      <a mat-button (click)="goToLogin()"> Login </a>
+      <a mat-button (click)="goToRegister()"> Register </a>
+    </div>
+
+    <div *ngIf="isLoggedIn()">
+      <a mat-button (click)="goToHome()"> Home </a>
+      <a mat-button (click)="goToCart()">Cart</a>
+    </div>
+
+    <span class="menu-spacer"></span>
+
+    <div *ngIf="isLoggedIn()">
+      <div ngbDropdown>
+        <a mat-button (click)="false" ngbDropdownToggle>Settings</a>
+        <div ngbDropdownMenu>
+          <button ngbDropdownItem (click)="goToProfile()">Profile</button>
+          <button ngbDropdownItem>Previous Orders</button>
+          <div class="dropdown-divider"></div>
+          <button ngbDropdownItem (click)="signOut()">Sign Out</button>
         </div>
-    </mat-toolbar-row>
+      </div>
+    </div>
+
+  </mat-toolbar-row>
 </mat-toolbar>
 
-<div class="container-fluid h-100">
-    <router-outlet></router-outlet>
-    <app-toasts></app-toasts>
+<div id="page-content" class="container-fluid h-100 no-padding">
+  <router-outlet></router-outlet>
+  <app-toasts></app-toasts>
+
+  <footer id="sticky-footer" class="footer py-4">
+    <div class="container text-center">
+      <ul>
+        <li><img src="../../assets/fb.png" alt="fb link"></li>
+        <li><img src="../../assets/insta.png" alt="insta link"></li>
+        <li><img src="../../assets/twitter.png" alt="twitter link"></li>
+
+      </ul>
+    </div>
+  </footer>
 </div>

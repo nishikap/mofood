@@ -1,8 +1,9 @@
 .home-main {
   background-color:#8f4068;
   color: whitesmoke;
-  font-family: "Times New Roman", Times, serif;
   text-align: center;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 
   h3 {
     margin: 0;
@@ -38,17 +39,4 @@
   }
 }
 
-.social-media-links {
-  background-color: #810000;
-  margin: 0,;
-  ul {
-    img {
-      width: 64px;
-      height: 64px;
-    }
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
 
-  }
-}
