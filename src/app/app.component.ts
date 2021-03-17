@@ -31,4 +31,8 @@ export class AppComponent {
     this.router.navigateByUrl('/profile');
 
   }
+  goToForgotpassword(){
+    this.router.navigateByUrl('/forgot-password');
+
+  }
 }
