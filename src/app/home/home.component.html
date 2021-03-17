@@ -1,47 +1,45 @@
-
 <div class="jumbotron jumbotron-fluid home-main">
-  
-  <div class="container">
-    <h1 class="display-4"><img src="../../assets/mofood-logo.png" alt="logo" /></h1>
-    <p class="lead">"Enjoy your favorite meals at your doorstep 🤤"</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" role="button">Get Started</a>
-    </p>
-  </div>
+
+    <div class="container">
+        <h1 class="display-4"><img src="../../assets/mofood-logo.png" alt="logo" /></h1>
+        <p class="lead">"Enjoy your favorite meals at your doorstep 🤤"</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" role="button" href="/login">Get Started</a>
+        </p>
+    </div>
 </div>
 
 <div class="home-search">
-  <form class="restaurant-form">
-    <mat-form-field class="full-width">
-      <mat-label>Search for your favourite resturants here ...</mat-label>
-      <input type="text" placeholder="search..." matInput [formControl]="restaurantsListControl"
-        [matAutocomplete]="auto">
-      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-          {{option}}
-        </mat-option>
-      </mat-autocomplete>
-    </mat-form-field>
-  </form>
+    <form class="restaurant-form">
+        <mat-form-field class="full-width">
+            <mat-label>Search for your favourite resturants here ...</mat-label>
+            <input type="text" placeholder="search..." matInput [formControl]="restaurantsListControl" [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
 </div>
 
 <div class="restaurant-listing">
-  <mat-card class="card">
-    <img src="../../assets/res1.jpg" alt="">
-  </mat-card>
-  <mat-card class="card">
-    <img src="../../assets/res2.jpg" alt="">
-  </mat-card>
-  <mat-card class="card">
-    <img src="../../assets/res3.jpg" alt="">
-  </mat-card>
-  <mat-card class="card">
-    <img src="../../assets/download.jpg" alt="">
-  </mat-card>
-  <mat-card class="card">
-    <img src="../../assets/res4.jpg" alt="">
-  </mat-card>
-  <mat-card class="card">
-    <img src="../../assets/res5.jpg" alt="">
-  </mat-card>
+    <mat-card class="card">
+        <img src="../../assets/res1.jpg" alt="">
+    </mat-card>
+    <mat-card class="card">
+        <img src="../../assets/res2.jpg" alt="">
+    </mat-card>
+    <mat-card class="card">
+        <img src="../../assets/res3.jpg" alt="">
+    </mat-card>
+    <mat-card class="card">
+        <img src="../../assets/download.jpg" alt="">
+    </mat-card>
+    <mat-card class="card">
+        <img src="../../assets/res4.jpg" alt="">
+    </mat-card>
+    <mat-card class="card">
+        <img src="../../assets/res5.jpg" alt="">
+    </mat-card>
 </div>
