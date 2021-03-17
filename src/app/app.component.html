@@ -1,13 +1,14 @@
 <mat-toolbar class="toolbar-style">
     <mat-toolbar-row>
-      <h1>MoFood</h1>
-      <span class="menu-spacer"></span>
-      <div>
-        <a mat-button (click)="goToHome()"> Home </a>
-        <a mat-button (click)="goToLogin()"> Login </a>
-        <a mat-button (click)="goToRegister()"> Register </a>
-      </div>
+        <h1>MoFood</h1>
+        <span class="menu-spacer"></span>
+        <div>
+            <a mat-button (click)="goToHome()"> Home </a>
+            <a mat-button (click)="goToLogin()"> Login </a>
+            <a mat-button (click)="goToRegister()"> Register </a>
+            <a mat-button (click)="goToCart()">Cart</a>
+        </div>
     </mat-toolbar-row>
 
-  </mat-toolbar>
+</mat-toolbar>
 <router-outlet></router-outlet>
