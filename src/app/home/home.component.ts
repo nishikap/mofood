@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 
@@ -13,7 +14,7 @@ export class HomeComponent implements OnInit {
   options: string[] = ['deurali', 'kanchu ko vatti', 'madan grill kitchen and bar', 'Alucha'];
   filteredOptions: Observable<string[]>;
 
-  constructor() { }
+  constructor(protected router: Router,) { }
 
   ngOnInit() {
     this.filteredOptions = this.restaurantsListControl.valueChanges.pipe(
@@ -26,6 +27,10 @@ export class HomeComponent implements OnInit {
     const filterValue = value.toLowerCase();
 
     return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
+  }
+
+  viewMenu(){
+      this.router.navigateByUrl('/menu');
   }
 
 }
