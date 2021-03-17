@@ -15,4 +15,8 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  signOut(){
+    this.authService.SignOut();
+  }
+
 }
