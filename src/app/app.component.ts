@@ -39,12 +39,9 @@ export class AppComponent {
   signOut(){
     this.authService.SignOut();
   }
-<<<<<<< HEAD
+  
   goToForgotpassword(){
     this.router.navigateByUrl('/forgot-password');
 
   }
-=======
-
->>>>>>> 2f948f79401646f680e91784a630cce52100f5f9
 }
