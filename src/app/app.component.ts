@@ -27,4 +27,8 @@ export class AppComponent {
     this.router.navigateByUrl('/cart');
   }
 
+  goToProfile(){
+    this.router.navigateByUrl('/profile');
+
+  }
 }
