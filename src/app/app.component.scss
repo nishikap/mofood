@@ -38,7 +38,8 @@ body {
 
 #page-content {
     flex: 1 0 auto;
-    overflow: hidden;
+    overflow-x: hidden;
+    padding-bottom: 2rem;
 }
 
 a {
