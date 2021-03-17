@@ -23,4 +23,8 @@ export class AppComponent {
     this.router.navigateByUrl('/home');
   }
 
+  goToCart() {
+    this.router.navigateByUrl('/cart');
+  }
+
 }
