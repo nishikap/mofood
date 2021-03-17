@@ -1,6 +1,5 @@
 {
-    "restaurants": [
-        {
+    "restaurants": [{
             "id": 1,
             "name": "kantipur Tandoori House",
             "description": "Indian, Nepali, Asian",
@@ -10,8 +9,7 @@
             "available": true,
             "pickupAvailable": true,
             "deliveryAvailable": true,
-            "menuItems": [
-                {
+            "menuItems": [{
                     "id": 1,
                     "name": "Paneer Chilli",
                     "description": "Paneer fried with onion, tomato, capsicum, sauces and spices ",
@@ -50,8 +48,7 @@
             "available": false,
             "pickupAvailable": true,
             "deliveryAvailable": false,
-            "menuItems": [
-                {
+            "menuItems": [{
                     "id": 1,
                     "name": "Cheese Naan",
                     "description": "Pita bread with mozzarella cheese topped with cilantro ",
@@ -90,8 +87,7 @@
             "available": false,
             "pickupAvailable": true,
             "deliveryAvailable": false,
-            "menuItems": [
-                {
+            "menuItems": [{
                     "id": 1,
                     "name": "Spaghetti Carbonara",
                     "description": "Spaghetti made with our special white sauce and cheese ",
@@ -130,8 +126,7 @@
             "available": true,
             "pickupAvailable": true,
             "deliveryAvailable": true,
-            "menuItems": [
-                {
+            "menuItems": [{
                     "id": 1,
                     "name": "Chicken Boneless Bucket",
                     "description": "Fried boneless chicken with add-on flavors of different sauce ",
@@ -188,8 +183,7 @@
             "available": true,
             "pickupAvailable": true,
             "deliveryAvailable": false,
-            "menuItems": [
-                {
+            "menuItems": [{
                     "id": 1,
                     "name": "Totopos",
                     "description": "Corn Chips served with refried beans and a touch of Spicy Garlic Salsa",
@@ -255,8 +249,7 @@
             "available": true,
             "pickupAvailable": true,
             "deliveryAvailable": false,
-            "menuItems": [
-                {
+            "menuItems": [{
                     "id": 1,
                     "name": "Samay Baji",
                     "description": "Newari traditional platter with different dishes and spices including traditional pickles with your choice of meat or vegetable",
@@ -340,8 +333,7 @@
             "available": true,
             "pickupAvailable": true,
             "deliveryAvailable": false,
-            "menuItems": [
-                {
+            "menuItems": [{
                     "id": 1,
                     "name": "Mutton Sukuti Sadeko",
                     "description": "Dried mutton mixed with assorted spices, onions, garlic, ginger, pepper",
@@ -432,6 +424,133 @@
                     "type": "Dessert"
                 }
             ]
+        },
+        {
+            "id": 8,
+            "name": "Aalucha",
+            "description": "Local Fast Food Restaurant",
+            "location": "Durbar Square, Kathmandu 44600, Nepal",
+            "phone": "9779860108771",
+            "email": "contact@aalucha.com",
+            "available": true,
+            "pickupAvailable": true,
+            "deliveryAvailable": false,
+            "menuItems": [{
+                    "id": 1,
+                    "name": "Homemade Sukuti Fries",
+                    "description": "Dried meat mixed with assorted spices, onions, garlic, ginger, pepper along with authentic local sauces",
+                    "price": 300,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 2,
+                    "name": "Butter Chicken Poutine",
+                    "description": "Butter Chicken and French fries with spices, curd topped with brown gravy and our recipe sauce ",
+                    "price": 250,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 3,
+                    "name": "Chhoila fries with chicken sausage and egg",
+                    "description": "Spiced grilled buffalo meat with chicken sausage and egg topping",
+                    "price": 250,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 4,
+                    "name": "Tornado Fries",
+                    "description": "Deep fried spiral-cut whole potato on a stick with classic newari spices along with onion cheese or honey",
+                    "price": 100,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 5,
+                    "name": "Chicken Roll",
+                    "description": "Juicy Chicken marinated in creamy yogurt and spices, rolled up in a buttery, flaky paratha with peppers, onions and chutney",
+                    "price": 180,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 6,
+                    "name": "Kala Khatta",
+                    "description": "Dark, sweet tangy sherbet of jamun with flavor of Himalayan salt ",
+                    "price": 60,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Beverage"
+
+                }
+
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Fuchhey Restaurant",
+            "description": "Fast Food Restaurant",
+            "location": "Putalisadak Nepal Share MArket Building, Kathmandu 44600, Nepal",
+            "phone": "97714248094",
+            "email": "contact@fuchhey.com",
+            "available": true,
+            "pickupAvailable": true,
+            "deliveryAvailable": false,
+            "menuItems": [{
+                    "id": 1,
+                    "name": "Fuchhey Special Sausage",
+                    "description": "Deep fried sausage with your choice of meat and number of pieces",
+                    "price": 50,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 2,
+                    "name": "Fuchhey Chilli",
+                    "description": "Spicy dry meat of your choice mixed in with varieties of vegetables and sauce",
+                    "price": 220,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 3,
+                    "name": "Fuchhey Bowl",
+                    "description": "Starter pack of meal in a bowl with choice of rice or noodles(fried or soup) with choice of meat or vegetables ",
+                    "price": 190,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 4,
+                    "name": "Tornado Fries",
+                    "description": "Deep fried spiral-cut whole potato on a stick with classic newari spices along with onion cheese or honey",
+                    "price": 100,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 5,
+                    "name": "Fuchhey Special Selroti",
+                    "description": "Ring-shaped sweet rice bread",
+                    "price": 20,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                }
+
+            ]
         }
+
     ]
 }

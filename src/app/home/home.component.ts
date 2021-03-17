@@ -10,7 +10,7 @@ import {map, startWith} from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
   restaurantsListControl = new FormControl();
-  options: string[] = ['deurali', 'kanchu ko vatti', 'madan grill kitchen and bar'];
+  options: string[] = ['deurali', 'kanchu ko vatti', 'madan grill kitchen and bar', 'Alucha'];
   filteredOptions: Observable<string[]>;
 
   constructor() { }
