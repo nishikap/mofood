@@ -1,5 +1,5 @@
 .home-main {
-  background-color: #f39189;
+  background-color:#8f4068;
   color: whitesmoke;
   font-family: "Times New Roman", Times, serif;
   text-align: center;
@@ -10,7 +10,7 @@
 }
 
 .home-search {
-  //   background-color: #b4aee8;
+  //   background-color: black;
   padding-top: 10px;
   text-align: center;
 }
@@ -31,7 +31,7 @@
   justify-content: center;
   min-height: 300px;
   padding: 18px;
-  //   background-color: #ffe3fe;
+  //  background-color: #cee6b4;
   img {
     width: 150px;
     height: 150px;
@@ -39,7 +39,8 @@
 }
 
 .social-media-links {
-  background-color: #f39189;
+  background-color: #810000;
+  margin: 0,;
   ul {
     img {
       width: 64px;
@@ -48,5 +49,6 @@
     display: flex;
     flex-direction: row;
     list-style-type: none;
+
   }
 }
