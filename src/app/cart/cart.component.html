@@ -1,61 +1,54 @@
-<body>
-    <div>
-        <p>Here are the items you have selected from the resturants:</p>
+<div class="container mt-5 mb-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-8">
+            <div class="p-2">
+                <h4>Your Order</h4>
 
-        <H1>Item Details:</H1>
-
-        <div class="row row-cols-1 row-cols-md-2">
-            <div class="col mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Item One Details</h5>
-                        <p>Item Name:</p>
-                        <p>Item Quantity:</p>
-                        <p>Price:</p>
-                        <p>sides:</p>
+                <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
+                    <div class="mr-1"><img class="rounded" src="https://via.placeholder.com/70" width="70"></div>
+                    <div class="d-flex flex-column align-items-center product-details">
+                        <span class="font-weight-bold">Menu item 1</span>
+                        <div class="d-flex flex-row product-desc">
+                            <div class="level mr-1"><span class="text-grey">Spice Level:</span><span
+                                    class="font-weight-bold">&nbsp;Medium</span></div>
+                        </div>
                     </div>
+                    <div class="d-flex flex-row align-items-center qty"><i class="fa fa-minus text-danger"></i>
+                        <h5 class="text-grey mt-1 mr-1 ml-1">2</h5><i class="fa fa-plus text-success"></i>
+                    </div>
+                    <div>
+                        <h5 class="text-grey">$20.00</h5>
+                    </div>
+                    <div class="d-flex align-items-center"><i class="fa fa-trash mb-1 text-danger"></i></div>
                 </div>
-            </div>
 
-
-            <div class="col mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Item three Details</h5>
-                        <p>Item Name:</p>
-                        <p>Item Quantity:</p>
-                        <p>Price:</p>
-                        <p>sides:</p>
+                <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
+                    <div class="mr-1"><img class="rounded" src="https://via.placeholder.com/70" width="70"></div>
+                    <div class="d-flex flex-column align-items-center product-details">
+                        <span class="font-weight-bold">Menu item 2</span>
+                        <div class="d-flex flex-row product-desc">
+                            <div class="level mr-1"><span class="text-grey">Spice Level:</span><span
+                                    class="font-weight-bold">&nbsp;Very Spicy</span></div>
+                        </div>
                     </div>
+                    <div class="d-flex flex-row align-items-center qty"><i class="fa fa-minus text-danger"></i>
+                        <h5 class="text-grey mt-1 mr-1 ml-1">2</h5><i class="fa fa-plus text-success"></i>
+                    </div>
+                    <div>
+                        <h5 class="text-grey">$20.00</h5>
+                    </div>
+                    <div class="d-flex align-items-center"><i class="fa fa-trash mb-1 text-danger"></i></div>
                 </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Item four details</h5>
-                        <p>Item Name:</p>
-                        <p>Item Quantity:</p>
-                        <p>Price:</p>
-                        <p>sides:</p>
-                    </div>
+
+                <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
+                    <input type="text" class="form-control border-0 gift-card" placeholder="discount code/gift card">
+                    <button class="btn btn-outline-warning btn-sm ml-2" type="button">Apply</button>
+                </div>
+
+                <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
+                    <button class="btn btn-warning btn-block btn-lg ml-2 pay-button" type="button">Proceed to
+                        Pay</button>
                 </div>
             </div>
         </div>
     </div>
-    <div>
-        <div>
-            <h2>Final Order submission:</h2>
-            <P>Total Price of the order:</P>
-
-        </div>
-
-        <p>If you are happy with your order please press the submit button.</p>
-
-
-        <div>
-            <a class="btn btn-primary" href="/profile" role="button">Submit Order</a>
-
-        </div>
-    </div>
-
-</body>
