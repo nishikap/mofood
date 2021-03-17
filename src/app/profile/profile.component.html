@@ -2,26 +2,20 @@
 <div class="container-fluid">
     <div class="row">
 
-        <nav class="col-md-2 d-md-block bg-light sidebar">
+        <nav class="col-md-2 d-md-block sidebar pb-4 p-2">
             <div class="sidebar-sticky">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active">
-                            <i class="fas fa-user"></i>User Profile
-                        </a>
-                    </li>
-                    <!-- Calling SignOut() Api from AuthService -->
-                    <li class="nav-item">
-                        <a class="nav-link" (click)="authService.SignOut()">
-                            <i class="fas fa-sign-out-alt"></i>Log out
-                        </a>
-                    </li>
-                </ul>
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+                        User Profile
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">Orders</button>
+                    <button type="button" class="list-group-item list-group-item-action">Sign Out</button>
+                </div>
             </div>
         </nav>
 
         <!-- Main content -->
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <main role="main" class="col-md-6 ml-sm-auto col-lg-10 px-4">
             <div class="inner-adjust">
 
                 <div class="pt-3 pb-2 mb-3 border-bottom">

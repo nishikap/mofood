@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from './services/auth-service.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'mofood';
 
-  constructor(protected router: Router) { }
+  constructor(protected router: Router, public authService: AuthService) { }
 
   goToRegister() {
     this.router.navigateByUrl('/register');
@@ -23,16 +24,27 @@ export class AppComponent {
     this.router.navigateByUrl('/home');
   }
 
+  goToProfile() {
+    this.router.navigateByUrl('/profile');
+  }
+
   goToCart() {
     this.router.navigateByUrl('/cart');
   }
 
-  goToProfile(){
-    this.router.navigateByUrl('/profile');
-
+  isLoggedIn(){
+    return this.authService.isLoggedIn;
   }
+
+  signOut(){
+    this.authService.SignOut();
+  }
+<<<<<<< HEAD
   goToForgotpassword(){
     this.router.navigateByUrl('/forgot-password');
 
   }
+=======
+
+>>>>>>> 2f948f79401646f680e91784a630cce52100f5f9
 }
