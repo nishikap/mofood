@@ -24,6 +24,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { AuthService } from './services/auth-service.service';
 import { ToastGlobalService } from './services/toast-global.service';
+import { ToastsContainer } from './services/toast-container.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ToastGlobalService } from './services/toast-global.service';
     ForgotPasswordComponent,
     ProfileComponent,
     VerifyEmailComponent,
+    ToastsContainer
   ],
   imports: [
     BrowserModule,

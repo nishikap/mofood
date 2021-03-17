@@ -5,6 +5,7 @@ import { ToastGlobalService } from './toast-global.service';
 
 @Component({
     selector: 'app-toasts',
+    styleUrls: ['./toast-container.scss'],
     template: `
     <ngb-toast
       *ngFor="let toast of toastService.toasts"
