@@ -547,6 +547,17 @@
                     "currencyType": "NRS",
                     "available": true,
                     "type": "Appetizer"
+                },
+                {
+                    "id": 6,
+                    "name": "Shradesh ko Special Mutton",
+                    "description": "Mutton curry by our MasterChef Shradesh with authentic Himaliyan spices",
+                    "price": 475,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+
+
                 }
 
             ]
