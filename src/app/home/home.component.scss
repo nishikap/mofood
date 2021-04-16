@@ -1,5 +1,8 @@
 .home-main {
-  background-color:#8f4068;
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+  url("../../assets/main-bg.jpg");
+  background-size: cover;
+  background-color: #8f4068;
   color: whitesmoke;
   text-align: center;
   padding-right: 0 !important;
@@ -8,6 +11,10 @@
   h3 {
     margin: 0;
   }
+}
+
+.lead{
+  text-shadow: 0px 3px 5px #000;
 }
 
 .home-search {
@@ -33,5 +40,3 @@
     height: 150px;
   }
 }
-
-

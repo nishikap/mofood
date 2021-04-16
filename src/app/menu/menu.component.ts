@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListingService } from '../services/listing.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  restaurantData$: any;
+  constructor(protected listingService: ListingService) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    await this.getAllRestaurantData();
+  }
+
+  async getAllRestaurantData(){
+    this.restaurantData$ = await this.listingService.getRestaurantData();
+    console.log('this.restaurantData', this.restaurantData$);
   }
 
 }
