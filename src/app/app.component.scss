@@ -1,5 +1,5 @@
 .toolbar-style {
-    background-color: #630000;
+    background-color: #000;
     color: white;
 }
 
@@ -38,8 +38,32 @@ body {
 #page-content {
     flex: 1 0 auto;
     padding-bottom: 2rem;
+    padding-top: 4rem;
 }
 
 a {
     color: white;
 }
+
+::ng-deep mat-toolbar {
+    height: 64px;
+    position: fixed;
+    z-index: 100;
+    width: 100%  !important;
+    // margin-top: -3.5% !important;
+}
+
+// ::ng-deep .mat-tab-group {
+//     // margin-top: 10% !important;
+// }
+
+// ::ng-deep .mat-tab-header {
+//     z-index: 999;
+//     width: 100vw;
+//     position: fixed !important;
+// }
+
+// ::ng-deep .mat-tab-body-wrapper {
+//     position: relative !important;
+//     // margin-bottom: 10% !important;
+// }

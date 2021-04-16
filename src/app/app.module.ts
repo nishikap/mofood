@@ -25,6 +25,7 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { AuthService } from './services/auth-service.service';
 import { ToastGlobalService } from './services/toast-global.service';
 import { ToastsContainer } from './services/toast-container.component';
+import { ListingService } from './services/listing.service';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ToastsContainer } from './services/toast-container.component';
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
     AuthService,
-    ToastGlobalService
+    ToastGlobalService,
+    ListingService
   ],
   bootstrap: [AppComponent]
 })
