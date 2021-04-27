@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ListingService } from '../services/listing.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ListingService, MenuItem, Restaurant } from '../services/listing.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,16 +9,29 @@ import { ListingService } from '../services/listing.service';
 })
 export class MenuComponent implements OnInit {
 
-  restaurantData$: any;
-  constructor(protected listingService: ListingService) { }
+  restaurant: Restaurant;
+  appetizers: MenuItem[] = [];
+  entrees: MenuItem[] = [];
+  desserts: MenuItem[] = [];
+  restaurantId;
+  constructor(protected listingService: ListingService, protected route: ActivatedRoute) { }
 
-  async ngOnInit() {
-    await this.getAllRestaurantData();
+  ngOnInit() {
+    //read parameters here
+    this.route.params.subscribe(params => {
+      this.restaurantId = params["id"];
+      console.log('restaurant id is', this.restaurantId)
+    });
+
+    this.getRestaurant();
   }
 
-  async getAllRestaurantData(){
-    this.restaurantData$ = await this.listingService.getRestaurantData();
-    console.log('this.restaurantData', this.restaurantData$);
+  getRestaurant() {
+    this.restaurant = this.listingService.getRestaurant(this.restaurantId);
+    this.appetizers = this.restaurant.menuItems.filter((item) => item.type === "Appetizer");
+    this.entrees = this.restaurant.menuItems.filter((item) => item.type === "Entre");
+    this.desserts = this.restaurant.menuItems.filter((item) => item.type === "Dessert");
+
   }
 
 }

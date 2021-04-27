@@ -26,6 +26,8 @@ import { AuthService } from './services/auth-service.service';
 import { ToastGlobalService } from './services/toast-global.service';
 import { ToastsContainer } from './services/toast-container.component';
 import { ListingService } from './services/listing.service';
+import { CommonModule } from '@angular/common';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -37,9 +39,11 @@ import { ListingService } from './services/listing.service';
     ForgotPasswordComponent,
     ProfileComponent,
     VerifyEmailComponent,
-    ToastsContainer
+    ToastsContainer,
+    MenuComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,

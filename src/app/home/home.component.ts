@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
+import { map, startWith } from 'rxjs/operators';
 import { AuthService } from '../services/auth-service.service';
+import { ListingService, Restaurant } from '../services/listing.service';
 
 @Component({
   selector: 'app-home',
@@ -12,16 +13,23 @@ import { AuthService } from '../services/auth-service.service';
 })
 export class HomeComponent implements OnInit {
   restaurantsListControl = new FormControl();
-  options: string[] = ['deurali', 'kanchu ko vatti', 'madan grill kitchen and bar', 'Alucha'];
+  options: string[] = [];
   filteredOptions: Observable<string[]>;
 
-  constructor(protected router: Router, protected authService: AuthService) { }
+  restaurants: Restaurant[];
+
+  constructor(protected router: Router, protected authService: AuthService, protected listingService: ListingService) { }
 
   ngOnInit() {
     this.filteredOptions = this.restaurantsListControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value))
     );
+
+    this.restaurants = this.listingService.getAllRestaurants();
+    this.restaurants.forEach((restaurant) => {
+      this.options.push(restaurant.name);
+    });
   }
 
   private _filter(value: string): string[] {
@@ -30,11 +38,11 @@ export class HomeComponent implements OnInit {
     return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
   }
 
-  viewMenu(){
-      this.router.navigateByUrl('/menu');
+  viewMenu(restaurantId) {
+    this.router.navigateByUrl(`/menu/${restaurantId}`);
   }
 
-  isLoggedIn(){
+  isLoggedIn() {
     return this.authService.isLoggedIn;
   }
 

@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'menu', component: MenuComponent },
+  { path: 'menu/:id', component: MenuComponent },
   { path: 'payment', component: PaymentComponent}
 ];
 

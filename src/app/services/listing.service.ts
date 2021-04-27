@@ -7,20 +7,59 @@ import { map } from 'rxjs/operators';
 })
 export class ListingService {
 
-  restaurantData$;
-  constructor(private afs: AngularFirestore) { }
+  restaurantData: Restaurant[] = [];
+  constructor(private afs: AngularFirestore) {
+    this.populateAllData();
+   }
 
-  ngOnInit() {
-    console.log('restaurants are', this.restaurantData$);
+  populateAllData() {
+    let restaurants = this.afs.firestore.collection(`restaurants`);
+    restaurants.get().then((restaurant) => {
+      restaurant.forEach((doc: any) => {
+        let data = doc.data();
+        this.restaurantData.push(data);
+      })
+      sessionStorage.setItem('restaurants', JSON.stringify(this.restaurantData));
+    })
   }
 
-  async getRestaurantData(){
-    // this.afs.collection("restaurants").ref.get().then(data => console.log(data));
-    // return this.restaurantData$;
+  getAllRestaurants() {
+    return JSON.parse(sessionStorage.getItem('restaurants'));;
   }
 
-  getMenuItems(){
-
+  getRestaurant(restaurantId) {
+    // console.log('Inside getRestaurant', Number(restaurantId), this.restaurantData);
+    let restaurants: Restaurant[] = JSON.parse(sessionStorage.getItem('restaurants'));
+    console.log('Inside getRestaurant', restaurants);
+    const restaurant = restaurants.find((restaurant) => restaurant.id === Number(restaurantId));
+    return restaurant;
+    // return this.restaurantData.filter((restaurant: Restaurant) => { 
+    //   restaurant.id === restaurantId
+    // });
   }
 
+}
+
+
+export interface Restaurant {
+  name: string;
+  id: number;
+  phone: string;
+  email: string;
+  description: string;
+  location: string;
+  menuItems: MenuItem[];
+  available: boolean;
+  deliveryAvailable: boolean;
+  pickupAvailable: boolean;
+}
+
+export interface MenuItem {
+  available: boolean;
+  currencyType: string;
+  description: string;
+  id: number;
+  name: string;
+  price: number;
+  type: string;
 }

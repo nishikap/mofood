@@ -40,3 +40,17 @@
     height: 150px;
   }
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > div[class*='col-'] {
+ display: flex;
+}
+
+.card{
+  padding-top: 0.5rem;
+  margin: 0.3rem;
+}

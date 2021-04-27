@@ -25,53 +25,15 @@
 </div>
 
 <div class="restaurant-listing row justify-content-center">
-  <div class="card-group">
-    <div class="col-sm-2 card">
-      <img class="card-img-top" src="../../assets/res1.jpg" alt="res 1">
-      <div class="card-body">
-        <h5 class="card-title">Restaurant 1</h5>
-        <p class="card-text">Description</p>
-        <a (click)="viewMenu()" mat-button class="btn btn-primary">View Menu</a>
-      </div>
-    </div>
-    <div class="col-sm-2 card">
-      <img class="card-img-top" src="../../assets/res2.jpg" alt="res 1">
-      <div class="card-body">
-        <h5 class="card-title">Restaurant 2</h5>
-        <p class="card-text">Description</p>
-        <a (click)="viewMenu()" mat-button class="btn btn-primary">View Menu</a>
-      </div>
-    </div>
-    <div class="col-sm-2 card">
-      <img class="card-img-top" src="../../assets/res3.jpg" alt="res 1">
-      <div class="card-body">
-        <h5 class="card-title">Restaurant 3</h5>
-        <p class="card-text">Description</p>
-        <a (click)="viewMenu()" mat-button class="btn btn-primary">View Menu</a>
-      </div>
-    </div>
-    <div class="col-sm-2 card">
-      <img class="card-img-top" src="../../assets/res1.jpg" alt="res 1">
-      <div class="card-body">
-        <h5 class="card-title">Restaurant 4</h5>
-        <p class="card-text">Description</p>
-        <a (click)="viewMenu()" mat-button class="btn btn-primary">View Menu</a>
-      </div>
-    </div>
-    <div class="col-sm-2 card">
-      <img class="card-img-top" src="../../assets/res4.jpg" alt="res 1">
-      <div class="card-body">
-        <h5 class="card-title">Restaurant 5</h5>
-        <p class="card-text">Description</p>
-        <a (click)="viewMenu()" mat-button class="btn btn-primary">View Menu</a>
-      </div>
-    </div>
-    <div class="col-sm-2 card">
-      <img class="card-img-top" src="../../assets/download.jpg" alt="res 1">
-      <div class="card-body">
-        <h5 class="card-title">Restaurant 6</h5>
-        <p class="card-text">Description</p>
-        <a (click)="viewMenu()" mat-button class="btn btn-primary">View Menu</a>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2 card" *ngFor="let restaurant of restaurants">
+        <img class="card-img-top" src="../../assets/res{{restaurant.id}}.jpg" alt="{{restaurant.name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{restaurant.name}}</h5>
+          <p class="card-text">{{restaurant.description}}</p>
+          <a (click)="viewMenu(restaurant.id)" mat-button class="btn btn-primary">View Menu</a>
+        </div>
       </div>
     </div>
   </div>
