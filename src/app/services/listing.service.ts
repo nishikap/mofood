@@ -51,7 +51,7 @@ export class ListingService {
     let cartItems: MenuItem[] = JSON.parse(sessionStorage.getItem('cart'));
     if (cartItems && cartItems.length > 0) {
       let itemExists = cartItems.find((i) => {
-        i.name === item.name;
+        return i.name === item.name;
       });
       // console.log('does item exist', item, itemExists)
       if (itemExists) {
