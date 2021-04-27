@@ -42,6 +42,12 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl(`/menu/${restaurantId}`);
   }
 
+  viewMenuByName(restaurantName){
+    const restaurantId = this.restaurants.find((restaurant) => restaurant.name ===  restaurantName).id;
+    this.router.navigateByUrl(`/menu/${restaurantId}`);
+
+  }
+
   isLoggedIn() {
     return this.authService.isLoggedIn;
   }

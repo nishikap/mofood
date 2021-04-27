@@ -15,7 +15,7 @@
       <mat-label>Search for your favourite resturants here ...</mat-label>
       <input type="text" placeholder="search..." matInput [formControl]="restaurantsListControl"
         [matAutocomplete]="auto">
-      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="viewMenuByName($event.option.value)">
         <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
           {{option}}
         </mat-option>

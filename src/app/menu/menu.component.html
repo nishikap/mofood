@@ -13,17 +13,21 @@
                 <span class="float-right font-weight-bold">{{appetizer.price}}</span>
                 <h6 class="text-truncate">{{appetizer.name}}</h6>
                 <p class="small">{{appetizer.description}}</p>
+                <a *ngIf="!isItemAlreadyInCart(appetizer)" (click)="addToCart(appetizer)" mat-button class="btn btn-primary">Add to cart</a>
+                <p *ngIf="isItemAlreadyInCart(appetizer)">Added to cart</p>
             </div>
         </div>
         <div class="col-12 mt-4">
-            <h3 class="text-center">Entre</h3>
+            <h3 class="text-center">Entree</h3>
             <hr class="accent my-5">
         </div>
-        <div class="card-columns" >
+        <div class="card-columns">
             <div class="card card-body" *ngFor="let entre of entrees">
                 <span class="float-right font-weight-bold">{{entre.price}}</span>
                 <h6 class="text-truncate">{{entre.name}}</h6>
                 <p class="small">{{entre.description}}</p>
+                <a *ngIf="!isItemAlreadyInCart(entre)" (click)="addToCart(entre)" mat-button class="btn btn-primary">Add to cart</a>
+                <p *ngIf="isItemAlreadyInCart(entre)">Added to cart</p>
             </div>
         </div>
         <div class="col-12 mt-4">
@@ -35,6 +39,8 @@
                 <span class="float-right font-weight-bold">{{desert.price}}</span>
                 <h6 class="text-truncate">{{desert.name}}</h6>
                 <p class="small">{{desert.description}}</p>
+                <a *ngIf="!isItemAlreadyInCart(desert)" (click)="addToCart(desert)" mat-button class="btn btn-primary">Add to card</a>
+                <p *ngIf="isItemAlreadyInCart(desert)">Added to cart</p>
             </div>
         </div>
         <div class="col-12 mt-5 border border-right-0 border-left-0">

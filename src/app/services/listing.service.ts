@@ -10,7 +10,7 @@ export class ListingService {
   restaurantData: Restaurant[] = [];
   constructor(private afs: AngularFirestore) {
     this.populateAllData();
-   }
+  }
 
   populateAllData() {
     let restaurants = this.afs.firestore.collection(`restaurants`);
@@ -20,6 +20,10 @@ export class ListingService {
         this.restaurantData.push(data);
       })
       sessionStorage.setItem('restaurants', JSON.stringify(this.restaurantData));
+      let cartItems: MenuItem[] = JSON.parse(sessionStorage.getItem('cart'));
+      if(!cartItems && cartItems.length < 0){
+        sessionStorage.setItem('cart', JSON.stringify([]));
+      }
     })
   }
 
@@ -28,14 +32,40 @@ export class ListingService {
   }
 
   getRestaurant(restaurantId) {
-    // console.log('Inside getRestaurant', Number(restaurantId), this.restaurantData);
     let restaurants: Restaurant[] = JSON.parse(sessionStorage.getItem('restaurants'));
     console.log('Inside getRestaurant', restaurants);
     const restaurant = restaurants.find((restaurant) => restaurant.id === Number(restaurantId));
     return restaurant;
-    // return this.restaurantData.filter((restaurant: Restaurant) => { 
-    //   restaurant.id === restaurantId
-    // });
+  }
+
+  addToCart(item: MenuItem) {
+    let cartItems: MenuItem[] = JSON.parse(sessionStorage.getItem('cart'));
+    cartItems.push(item);
+    console.log('cartItems are', cartItems);
+    sessionStorage.setItem('cart', JSON.stringify(cartItems));
+  }
+
+  checkIfItemIsAlreadyInCart(item: MenuItem): boolean {
+    console.log('cartItem is', item);
+    let cartItems: MenuItem[] = JSON.parse(sessionStorage.getItem('cart'));
+    let itemExists = cartItems.find((i) => i.name === item.name);
+    console.log('does item exist', item, itemExists)
+    if (itemExists) {
+      return true;
+    }
+    return false;
+  }
+
+  getCartItems(): MenuItem[]{
+    return JSON.parse(sessionStorage.getItem('cart'));
+  }
+
+  getTotalAmount(){
+    let cartItems = JSON.parse(sessionStorage.getItem('cart'));
+    let total: number = 0;
+    cartItems.forEach((item)=> total = total + item.price);
+    console.log('total is', total);
+    return total;
   }
 
 }

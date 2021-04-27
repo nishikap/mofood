@@ -28,6 +28,7 @@ import { ToastsContainer } from './services/toast-container.component';
 import { ListingService } from './services/listing.service';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MenuComponent } from './menu/menu.component';
     ProfileComponent,
     VerifyEmailComponent,
     ToastsContainer,
-    MenuComponent
+    MenuComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,

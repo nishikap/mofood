@@ -34,4 +34,12 @@ export class MenuComponent implements OnInit {
 
   }
 
+  addToCart(item){
+    this.listingService.addToCart(item);
+  }
+
+  isItemAlreadyInCart(item): boolean{
+    return this.listingService.checkIfItemIsAlreadyInCart(item);
+  }
+
 }
