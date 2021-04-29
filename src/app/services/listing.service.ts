@@ -21,7 +21,8 @@ export class ListingService {
       })
       sessionStorage.setItem('restaurants', JSON.stringify(this.restaurantData));
       let cartItems: MenuItem[] = JSON.parse(sessionStorage.getItem('cart'));
-      if(!cartItems && cartItems.length < 0){
+      // console.log('cartItems are', cartItems);
+      if (!cartItems) {
         sessionStorage.setItem('cart', JSON.stringify([]));
       }
     })
@@ -33,7 +34,7 @@ export class ListingService {
 
   getRestaurant(restaurantId) {
     let restaurants: Restaurant[] = JSON.parse(sessionStorage.getItem('restaurants'));
-    console.log('Inside getRestaurant', restaurants);
+    // console.log('Inside getRestaurant', restaurants);
     const restaurant = restaurants.find((restaurant) => restaurant.id === Number(restaurantId));
     return restaurant;
   }
@@ -41,30 +42,34 @@ export class ListingService {
   addToCart(item: MenuItem) {
     let cartItems: MenuItem[] = JSON.parse(sessionStorage.getItem('cart'));
     cartItems.push(item);
-    console.log('cartItems are', cartItems);
+    // console.log('cartItems are', cartItems);
     sessionStorage.setItem('cart', JSON.stringify(cartItems));
   }
 
   checkIfItemIsAlreadyInCart(item: MenuItem): boolean {
-    console.log('cartItem is', item);
+    // console.log('cartItem is', item);
     let cartItems: MenuItem[] = JSON.parse(sessionStorage.getItem('cart'));
-    let itemExists = cartItems.find((i) => i.name === item.name);
-    console.log('does item exist', item, itemExists)
-    if (itemExists) {
-      return true;
+    if (cartItems && cartItems.length > 0) {
+      let itemExists = cartItems.find((i) => {
+        return i.name === item.name;
+      });
+      // console.log('does item exist', item, itemExists)
+      if (itemExists) {
+        return true;
+      }
     }
     return false;
   }
 
-  getCartItems(): MenuItem[]{
+  getCartItems(): MenuItem[] {
     return JSON.parse(sessionStorage.getItem('cart'));
   }
 
-  getTotalAmount(){
+  getTotalAmount() {
     let cartItems = JSON.parse(sessionStorage.getItem('cart'));
     let total: number = 0;
-    cartItems.forEach((item)=> total = total + item.price);
-    console.log('total is', total);
+    cartItems.forEach((item) => total = total + item.price);
+    // console.log('total is', total);
     return total;
   }
 
