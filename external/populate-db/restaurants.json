@@ -20,6 +20,33 @@
                 },
                 {
                     "id": 2,
+                    "name": "sadheko wai wai",
+                    "description": "Flavored wai wai mixed with onions, green onions, tomatoes and lemon ",
+                    "price": 400,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 3,
+                    "name": "Piroo Aloo",
+                    "description": "Boiled potatoes stirfryed in house special spices",
+                    "price": 600,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 4,
+                    "name": "Chicken 65",
+                    "description": "Marinated chicken drumstick with house sauce",
+                    "price": 600,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 5,
                     "name": "Tandoori Chicken",
                     "description": "Tender chicken marinated in a spicy yogurt mixture and cooked in our tandoori oven",
                     "price": 1100,
@@ -28,7 +55,52 @@
                     "type": "Entre"
                 },
                 {
-                    "id": 3,
+                    "id": 6,
+                    "name": "Chicken Tikka Masala",
+                    "description": "Tender chicken marinated in a spicy yogurt mixture and cooked in our tandoori oven served with complimentary rice ",
+                    "price": 1300,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 7,
+                    "name": "Tandoori Chicken",
+                    "description": "Tender chicken marinated in a spicy yogurt mixture and cooked in our tandoori oven",
+                    "price": 1100,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 8,
+                    "name": "Tandoori Chicken Platter",
+                    "description": "Tender chicken marinated in a spicy yogurt mixture and cooked in our tandoori oven",
+                    "price": 2000,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Entre"
+                },
+                {
+                    "id": 9,
+                    "name": "Chicken Momo",
+                    "description": "Authentic Nepali dumplings served with two different sauce",
+                    "price": 900,
+                    "currencyType": "NRS",
+                    "available": false,
+                    "type": "Entre"
+                },
+                {
+                    "id": 10,
+                    "name": "Kheer",
+                    "description": "Rice pudding with almonds on top ",
+                    "price": 300,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Dessert"
+                },
+                {
+                    "id": 11,
                     "name": "Banana Splits",
                     "description": "Three scoops of ice-cream, split banana top with nuts",
                     "price": 200,
@@ -59,6 +131,24 @@
                 },
                 {
                     "id": 2,
+                    "name": "Bana-na bread sticks",
+                    "description": "classic italian bread mixed with ripped bananas topped with choco chips ",
+                    "price": 600,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 3,
+                    "name": "chocolate cookies",
+                    "description": "House special cookies served with 3 pieces per order ",
+                    "price": 300,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Appetizer"
+                },
+                {
+                    "id": 4,
                     "name": "Chicken Momo",
                     "description": "Authentic Nepali dumplings served with two different sauce",
                     "price": 900,
@@ -67,9 +157,45 @@
                     "type": "Entre"
                 },
                 {
-                    "id": 3,
+                    "id": 5,
+                    "name": "Veg Momo",
+                    "description": "Authentic Nepali dumplings served with two different sauce",
+                    "price": 750,
+                    "currencyType": "NRS",
+                    "available": false,
+                    "type": "Entre"
+                },
+                {
+                    "id": 6,
+                    "name": "Buff Momo",
+                    "description": "Authentic Nepali dumplings served with two different sauce",
+                    "price": 1100,
+                    "currencyType": "NRS",
+                    "available": false,
+                    "type": "Entre"
+                },
+                {
+                "id": 7,
+                "name": "Jhol Momo",
+                "description": "Authentic Nepali dumplings dipped in sauce and meat of your choice",
+                "price": 1300,
+                "currencyType": "NRS",
+                "available": false,
+                "type": "Entre"
+                },
+                {
+                    "id": 8,
                     "name": "Kheer",
                     "description": "Rice pudding with almonds on top ",
+                    "price": 300,
+                    "currencyType": "NRS",
+                    "available": true,
+                    "type": "Dessert"
+                },
+                {
+                    "id": 9,
+                    "name": "Ras malai",
+                    "description": "Flavoured youghurt dish served with almonds on top ",
                     "price": 300,
                     "currencyType": "NRS",
                     "available": true,
@@ -107,6 +233,42 @@
                 },
                 {
                     "id": 3,
+                    "name": "Chicken Momo",
+                    "description": "Authentic Nepali dumplings served with two different sauce",
+                    "price": 900,
+                    "currencyType": "NRS",
+                    "available": false,
+                    "type": "Entre"
+                },
+                {
+                    "id": 4,
+                    "name": "Veg Momo",
+                    "description": "Authentic Nepali dumplings served with two different sauce",
+                    "price": 750,
+                    "currencyType": "NRS",
+                    "available": false,
+                    "type": "Entre"
+                },
+                {
+                    "id": 5,
+                    "name": "Buff Momo",
+                    "description": "Authentic Nepali dumplings served with two different sauce",
+                    "price": 1100,
+                    "currencyType": "NRS",
+                    "available": false,
+                    "type": "Entre"
+                },
+                {
+                "id": 6,
+                "name": "Jhol Momo",
+                "description": "Authentic Nepali dumplings dipped in sauce and meat of your choice",
+                "price": 1300,
+                "currencyType": "NRS",
+                "available": false,
+                "type": "Entre"
+                },
+                {
+                    "id": 7,
                     "name": "Panna Cotta Vanilla",
                     "description": "Vanilla bean, heavy cream, mixed berries and gelatin mixed in a fine paste ",
                     "price": 450,
@@ -164,8 +326,8 @@
                 },
                 {
                     "id": 5,
-                    "name": "Chicken Burger",
-                    "description": "Cheddar Cheese, Chicken, Jalapeno, Creamy Sriracha Sauce, lettuce, tomato, red onions, and pickles on a brioche bun",
+                    "name": "Veg Burger",
+                    "description": "Cheddar Cheese, veg patty, Jalapeno, Creamy Sriracha Sauce, lettuce, tomato, red onions, and pickles on a brioche bun",
                     "price": 420,
                     "currencyType": "NRS",
                     "available": true,
