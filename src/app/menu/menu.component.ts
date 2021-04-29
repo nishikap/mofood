@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ListingService, MenuItem, Restaurant } from '../services/listing.service';
+import { AuthService } from '../services/auth-service.service';
+import {  ListingService, MenuItem, Restaurant } from '../services/listing.service';
 
 @Component({
   selector: 'app-menu',
@@ -14,7 +15,7 @@ export class MenuComponent implements OnInit {
   entrees: MenuItem[] = [];
   desserts: MenuItem[] = [];
   restaurantId;
-  constructor(protected listingService: ListingService, protected route: ActivatedRoute) { }
+  constructor(protected listingService: ListingService, protected route: ActivatedRoute, protected authService: AuthService) { }
 
   ngOnInit() {
     //read parameters here
@@ -34,7 +35,8 @@ export class MenuComponent implements OnInit {
 
   }
 
-  addToCart(item){
+  addToCart(item: MenuItem){
+    this.listingService.currentRestaurant = this.restaurant.id;
     this.listingService.addToCart(item);
   }
 

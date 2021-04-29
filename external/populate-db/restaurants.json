@@ -1,5 +1,6 @@
 {
-    "restaurants": [{
+    "restaurants": [
+        {
             "id": 1,
             "name": "kantipur Tandoori House",
             "description": "Indian, Nepali, Asian",
@@ -9,7 +10,8 @@
             "available": true,
             "pickupAvailable": true,
             "deliveryAvailable": true,
-            "menuItems": [{
+            "menuItems": [
+                {
                     "id": 1,
                     "name": "Paneer Chilli",
                     "description": "Paneer fried with onion, tomato, capsicum, sauces and spices ",
@@ -120,7 +122,8 @@
             "available": false,
             "pickupAvailable": true,
             "deliveryAvailable": false,
-            "menuItems": [{
+            "menuItems": [
+                {
                     "id": 1,
                     "name": "Cheese Naan",
                     "description": "Pita bread with mozzarella cheese topped with cilantro ",
@@ -175,13 +178,13 @@
                     "type": "Entre"
                 },
                 {
-                "id": 7,
-                "name": "Jhol Momo",
-                "description": "Authentic Nepali dumplings dipped in sauce and meat of your choice",
-                "price": 1300,
-                "currencyType": "NRS",
-                "available": false,
-                "type": "Entre"
+                    "id": 7,
+                    "name": "Jhol Momo",
+                    "description": "Authentic Nepali dumplings dipped in sauce and meat of your choice",
+                    "price": 1300,
+                    "currencyType": "NRS",
+                    "available": false,
+                    "type": "Entre"
                 },
                 {
                     "id": 8,
@@ -213,7 +216,8 @@
             "available": false,
             "pickupAvailable": true,
             "deliveryAvailable": false,
-            "menuItems": [{
+            "menuItems": [
+                {
                     "id": 1,
                     "name": "Spaghetti Carbonara",
                     "description": "Spaghetti made with our special white sauce and cheese ",
@@ -259,13 +263,13 @@
                     "type": "Entre"
                 },
                 {
-                "id": 6,
-                "name": "Jhol Momo",
-                "description": "Authentic Nepali dumplings dipped in sauce and meat of your choice",
-                "price": 1300,
-                "currencyType": "NRS",
-                "available": false,
-                "type": "Entre"
+                    "id": 6,
+                    "name": "Jhol Momo",
+                    "description": "Authentic Nepali dumplings dipped in sauce and meat of your choice",
+                    "price": 1300,
+                    "currencyType": "NRS",
+                    "available": false,
+                    "type": "Entre"
                 },
                 {
                     "id": 7,
@@ -288,7 +292,8 @@
             "available": true,
             "pickupAvailable": true,
             "deliveryAvailable": true,
-            "menuItems": [{
+            "menuItems": [
+                {
                     "id": 1,
                     "name": "Chicken Boneless Bucket",
                     "description": "Fried boneless chicken with add-on flavors of different sauce ",
@@ -345,7 +350,8 @@
             "available": true,
             "pickupAvailable": true,
             "deliveryAvailable": false,
-            "menuItems": [{
+            "menuItems": [
+                {
                     "id": 1,
                     "name": "Totopos",
                     "description": "Corn Chips served with refried beans and a touch of Spicy Garlic Salsa",
@@ -411,7 +417,8 @@
             "available": true,
             "pickupAvailable": true,
             "deliveryAvailable": false,
-            "menuItems": [{
+            "menuItems": [
+                {
                     "id": 1,
                     "name": "Samay Baji",
                     "description": "Newari traditional platter with different dishes and spices including traditional pickles with your choice of meat or vegetable",
@@ -495,7 +502,8 @@
             "available": true,
             "pickupAvailable": true,
             "deliveryAvailable": false,
-            "menuItems": [{
+            "menuItems": [
+                {
                     "id": 1,
                     "name": "Mutton Sukuti Sadeko",
                     "description": "Dried mutton mixed with assorted spices, onions, garlic, ginger, pepper",
@@ -597,7 +605,8 @@
             "available": true,
             "pickupAvailable": true,
             "deliveryAvailable": false,
-            "menuItems": [{
+            "menuItems": [
+                {
                     "id": 1,
                     "name": "Homemade Sukuti Fries",
                     "description": "Dried meat mixed with assorted spices, onions, garlic, ginger, pepper along with authentic local sauces",
@@ -650,9 +659,7 @@
                     "currencyType": "NRS",
                     "available": true,
                     "type": "Beverage"
-
                 }
-
             ]
         },
         {
@@ -665,7 +672,8 @@
             "available": true,
             "pickupAvailable": true,
             "deliveryAvailable": false,
-            "menuItems": [{
+            "menuItems": [
+                {
                     "id": 1,
                     "name": "Fuchhey Special Sausage",
                     "description": "Deep fried sausage with your choice of meat and number of pieces",
@@ -718,12 +726,8 @@
                     "currencyType": "NRS",
                     "available": true,
                     "type": "Entre"
-
-
                 }
-
             ]
         }
-
     ]
 }

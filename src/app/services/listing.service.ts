@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
+import { AuthService } from './auth-service.service';
+import { customAlphabet } from 'nanoid'
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +10,14 @@ import { map } from 'rxjs/operators';
 export class ListingService {
 
   restaurantData: Restaurant[] = [];
-  constructor(private afs: AngularFirestore) {
+  orders: OrderItem[] = [];
+  currentRestaurant: number;
+  constructor(private afs: AngularFirestore, private authService: AuthService) {
     this.populateAllData();
   }
 
   populateAllData() {
+    this.restaurantData = [];
     let restaurants = this.afs.firestore.collection(`restaurants`);
     restaurants.get().then((restaurant) => {
       restaurant.forEach((doc: any) => {
@@ -26,6 +31,23 @@ export class ListingService {
         sessionStorage.setItem('cart', JSON.stringify([]));
       }
     })
+  }
+
+  populateAllOrders() {
+    this.orders = [];
+    let orders = this.afs.firestore.collection(`orders`);
+    orders.get().then((order) => {
+      order.forEach((doc: any) => {
+        let data = doc.data();
+        let docId = doc.id;
+        this.orders.push({ ...data, documentId: docId });
+      })
+      sessionStorage.setItem('orders', JSON.stringify(this.orders));
+    })
+  }
+
+  getAllOrders() {
+    return JSON.parse(sessionStorage.getItem('orders'));;
   }
 
   getAllRestaurants() {
@@ -68,9 +90,51 @@ export class ListingService {
   getTotalAmount() {
     let cartItems = JSON.parse(sessionStorage.getItem('cart'));
     let total: number = 0;
-    cartItems.forEach((item) => total = total + item.price);
+    if (cartItems && cartItems.length > 0) {
+      cartItems.forEach((item) => total = total + item.price);
+    }
     // console.log('total is', total);
     return total;
+  }
+
+  placeOrder(cartItems: MenuItem[]) {
+    // let cartItems = 
+    console.log('Inside PlaceOrder', cartItems);
+
+    const userOrderRef = this.afs.firestore.collection('orders');
+    let orderData = this.buildOrderItem(cartItems);
+    userOrderRef.doc().set(orderData).then((value) => {
+      console.log('successfully added order', value);
+    })
+  }
+
+  cleanCart() {
+    sessionStorage.removeItem('cart');
+  }
+
+  buildOrderItem(cartItems: MenuItem[]) {
+    return {
+      cartItems: cartItems,
+      restaurantId: this.currentRestaurant,
+      userId: this.authService.userData.uid,
+      status: 'active',
+      timestamp: new Date(),
+      orderNumber: '#' + this.getOrderNumber()
+    }
+  }
+
+  getOrderNumber(): string {
+    let nanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', 6);
+    return nanoid();
+  }
+
+  completeOrder(order) {
+    console.log('this.completeOrder', order);
+    const userOrderRef = this.afs.firestore.collection('orders');
+
+    userOrderRef.doc(order.documentId).update({
+      "status": "completed"
+    })
   }
 
 }
@@ -97,4 +161,14 @@ export interface MenuItem {
   name: string;
   price: number;
   type: string;
+}
+
+export interface OrderItem extends MenuItem {
+  status: string;
+  cartItems: MenuItem[];
+  restaurantId: number;
+  userId: string;
+  timestamp: Date;
+  orderNumber: string;
+  documentId?: string;
 }

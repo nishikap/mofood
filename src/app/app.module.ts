@@ -29,6 +29,7 @@ import { ListingService } from './services/listing.service';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
 import { CartComponent } from './cart/cart.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CartComponent } from './cart/cart.component';
     VerifyEmailComponent,
     ToastsContainer,
     MenuComponent,
-    CartComponent
+    CartComponent,
+    AdminComponent
   ],
   imports: [
     CommonModule,
@@ -58,7 +60,7 @@ import { CartComponent } from './cart/cart.component';
     HttpClientModule,
     MaterialModule,
     MatNativeDateModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },

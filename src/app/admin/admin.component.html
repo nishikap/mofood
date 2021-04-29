@@ -1,0 +1,63 @@
+<div class="container-fluid" *ngIf="orders && orders.length > 0">
+    <div class="row">
+
+        <nav class="col-md-2 d-md-block sidebar pb-4 p-2">
+            <div class="sidebar-sticky">
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+                        <b>User Profile</b>
+                    </button>
+                    <button (click)="this.showActiveOrders()" type="button"
+                        [ngClass]="{active:isActive('activeOrders')}"
+                        class="list-group-item list-group-item-action">Active Orders</button>
+                    <button (click)="this.showPreviousOrders()" type="button"
+                        [ngClass]="{active:isActive('previousOrders')}"
+                        class="list-group-item list-group-item-action">Previous Orders</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main content -->
+        <main role="main" class="col-md-6 ml-sm-auto col-lg-10 px-4">
+            <div class="inner-adjust">
+
+                <div class="pt-3 pb-2 mb-3 border-bottom">
+                    <p *ngIf="activeTab === 'activeOrders'" class="lead">Current Orders</p>
+                    <p *ngIf="activeTab === 'previousOrders'" class="lead">Previous Orders</p>
+                </div>
+                <!-- Show user data when logged in -->
+                <div class="container row col-12">
+                    <div *ngFor="let order of orders">
+                        <div class="card" style="width: 20rem;">
+                            <div class="card-header row no-gutters">
+                                <div class="col-md-4">
+                                    {{order.orderNumber}}
+                                </div>
+                                <div class="col-md-2" *ngIf="order.status === 'active'">
+                                    <a (click)="completeOrder(order)" mat-button class="btn btn-primary">Complete
+                                        Order</a>
+
+                                </div>
+                                <div class="col-md-2" *ngIf="order.status === 'completed'">
+                                    <a mat-button class="btn btn-secondary">Completed</a>
+                                </div>
+                            </div>
+                            <ul class="list-group list-group-flush" *ngFor="let orderItem of order.cartItems">
+                                <li class="list-group-item">{{orderItem.name}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</div>
+
+<div class="container-fluid" *ngIf="orders && orders.length < 1">
+
+
+    <div class="pt-3 pb-2 mb-3">
+        <p class="lead">No Orders Available....</p>
+    </div>
+</div>

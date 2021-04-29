@@ -10,7 +10,7 @@ import { AuthGuard } from './shared/guard/auth.guard';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MenuComponent } from './menu/menu.component';
-import { PaymentComponent } from './payment/payment.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 const routes: Routes = [
@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'menu', component: MenuComponent },
   { path: 'menu/:id', component: MenuComponent },
-  { path: 'payment', component: PaymentComponent}
+  { path: 'admin', component: AdminComponent}
 ];
 
 @NgModule({
