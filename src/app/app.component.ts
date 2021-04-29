@@ -25,6 +25,10 @@ export class AppComponent {
     this.router.navigateByUrl('/home');
   }
 
+  goToAdmin(){
+    this.router.navigateByUrl('/admin');
+  }
+
   goToProfile() {
     this.router.navigateByUrl('/profile');
   }

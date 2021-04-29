@@ -19,7 +19,7 @@
         <a mat-button (click)="false" ngbDropdownToggle>Settings</a>
         <div ngbDropdownMenu>
           <button ngbDropdownItem (click)="goToProfile()">Profile</button>
-          <button ngbDropdownItem>Previous Orders</button>
+          <button ngbDropdownItem (click)="goToAdmin()">Admin</button>
           <div class="dropdown-divider"></div>
           <button ngbDropdownItem (click)="signOut()">Sign Out</button>
         </div>
