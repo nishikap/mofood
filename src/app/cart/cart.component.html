@@ -37,7 +37,7 @@
 
             <div *ngIf="cartItems && cartItems.length <= 0 && !isOrderPlaced">
                 <div class="jumbotron text-center">
-                    <h1 class="display-3">Your cart is current empty.</h1>
+                    <h1 class="display-3">Your cart is currently empty.</h1>
                     <hr>
                     <p class="lead">
                         <a class="btn btn-primary btn-sm" [routerLink]="'/home'" role="button"> 
@@ -45,7 +45,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <div *ngIf="isOrderPlaced">
                 <div class="jumbotron text-center">
                     <h1 class="display-3">Thank You!</h1>
