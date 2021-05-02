@@ -5,11 +5,16 @@
         <nav class="col-md-2 d-md-block sidebar pb-4 p-2">
             <div class="sidebar-sticky">
                 <div class="list-group">
-                    <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+                    <button type="button" (click)="changeTab('userProfile')"
+                        class="list-group-item list-group-item-action" [ngClass]="{active:isActive('userProfile')}"
+                        aria-current="true">
                         User Profile
                     </button>
-                    <button type="button" class="list-group-item list-group-item-action">Orders</button>
-                    <button type="button" (click)="signOut()" class="list-group-item list-group-item-action">Sign Out</button>
+                    <button type="button" (click)="changeTab('userOrders')"
+                        class="list-group-item list-group-item-action"
+                        [ngClass]="{active:isActive('userOrders')}">Orders</button>
+                    <button type="button" (click)="signOut()" class="list-group-item list-group-item-action">Sign
+                        Out</button>
                 </div>
             </div>
         </nav>
@@ -17,24 +22,49 @@
         <!-- Main content -->
         <main role="main" class="col-md-6 ml-sm-auto col-lg-10 px-4">
             <div class="inner-adjust">
-
-                <div class="pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">User Profile</h1>
-                </div>
-                <!-- Show user data when logged in -->
-                <div class="row" *ngIf="authService.userData as user">
-                    <div class="col-md-12">
-                        <div class="media">
-                            <img class="align-self-start mr-5 img-thumbnail rounded-circle" src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}" alt="{{user.displayName}}">
-                            <div class="media-body">
-                                <h1>Hello: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
-                                <p>Email: <strong>{{user.email}}</strong></p>
-                                <p>Email Verified: <strong>{{user.emailVerified}}</strong></p>
+                <div *ngIf="activeTab === 'userProfile'">
+                    <div class="pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">Your Profile</h1>
+                    </div>
+                    <!-- Show user data when logged in -->
+                    <div class="row" *ngIf="authService.userData as user">
+                        <div class="col-md-12">
+                            <div class="media">
+                                <img class="align-self-start mr-5 img-thumbnail rounded-circle"
+                                    src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}"
+                                    alt="{{user.displayName}}">
+                                <div class="media-body">
+                                    <h1>Hello: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
+                                    <p>Email: <strong>{{user.email}}</strong></p>
+                                    <p>Email Verified: <strong>{{user.emailVerified}}</strong></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <div *ngIf="activeTab === 'userOrders'">
+                    <div class="pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">Your Orders</h1>
+                    </div>
+                    <div *ngIf="orders.length > 0" class="container row col-12">
+                        <div *ngFor="let order of orders">
+                            <div class="card" style="width: 20rem;">
+                                <div class="card-header row no-gutters">
+                                    <div class="col-md-4">
+                                        {{order.orderNumber}}
+                                    </div>
+                                </div>
+                                <ul class="list-group list-group-flush" *ngFor="let orderItem of order.cartItems">
+                                    <li class="list-group-item">{{orderItem.name}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="orders.length <= 0">
+                        <p class="lead">No previous orders at this moment...</p>
+                    </div>
+                </div>
             </div>
         </main>
 

@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   options: string[] = [];
   filteredOptions: Observable<string[]>;
 
-  restaurants: Restaurant[];
+  restaurants: Restaurant[] = [];
 
   constructor(protected router: Router, protected authService: AuthService, protected listingService: ListingService) { }
 
@@ -26,10 +26,14 @@ export class HomeComponent implements OnInit {
       map(value => this._filter(value))
     );
 
-    this.restaurants = this.listingService.getAllRestaurants();
-    this.restaurants.forEach((restaurant) => {
-      this.options.push(restaurant.name);
+    this.listingService.populateAllData().subscribe((value)=>{
+      // console.log('value is', value);
+      this.restaurants = value;
+      this.restaurants.forEach((restaurant) => {
+        this.options.push(restaurant.name);
+      });
     });
+
   }
 
   private _filter(value: string): string[] {

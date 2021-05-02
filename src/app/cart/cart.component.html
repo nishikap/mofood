@@ -35,8 +35,28 @@
                 </div>
             </div>
 
-            <h4 *ngIf="cartItems && cartItems.length <= 0 && !isOrderPlaced" class="lead">Your cart is currently empty.</h4>
-            <h4 *ngIf="isOrderPlaced" class="lead">Thank you for placing an order!</h4>
+            <div *ngIf="cartItems && cartItems.length <= 0 && !isOrderPlaced">
+                <div class="jumbotron text-center">
+                    <h1 class="display-3">Your cart is current empty.</h1>
+                    <hr>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-sm" [routerLink]="'/home'" role="button"> 
+                            Go Back to homepage</a>
+                    </p>
+                </div>
+            </div>
+            
+            <div *ngIf="isOrderPlaced">
+                <div class="jumbotron text-center">
+                    <h1 class="display-3">Thank You!</h1>
+                    <p class="lead"><strong>Your order has been placed.</strong></p>
+                    <hr>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-sm" [routerLink]="'/home'" role="button">Continue
+                            to homepage</a>
+                    </p>
+                </div>
+            </div>
 
         </div>
 

@@ -26,7 +26,8 @@
 
 <div class="restaurant-listing row justify-content-center">
   <div class="container">
-    <div class="row">
+    <mat-progress-spinner *ngIf="restaurants.length <= 0" [diameter]="25" mode="indeterminate"></mat-progress-spinner>
+    <div *ngIf="restaurants.length > 0" class="row">
       <div class="col-sm-2 card" *ngFor="let restaurant of restaurants">
         <img class="card-img-top" src="../../assets/res{{restaurant.id}}.jpg" alt="{{restaurant.name}}">
         <div class="card-body">

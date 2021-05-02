@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 import { AuthService } from './auth-service.service';
 import { customAlphabet } from 'nanoid'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,42 +17,52 @@ export class ListingService {
     this.populateAllData();
   }
 
-  populateAllData() {
-    this.restaurantData = [];
-    let restaurants = this.afs.firestore.collection(`restaurants`);
-    restaurants.get().then((restaurant) => {
-      restaurant.forEach((doc: any) => {
-        let data = doc.data();
-        this.restaurantData.push(data);
+  populateAllData(): Observable<Restaurant[]> {
+    return new Observable((observable) => {
+      this.restaurantData = [];
+      let restaurants = this.afs.firestore.collection(`restaurants`);
+      restaurants.get().then((restaurant) => {
+        restaurant.forEach((doc: any) => {
+          let data = doc.data();
+          this.restaurantData.push(data);
+        })
+        sessionStorage.setItem('restaurants', JSON.stringify(this.restaurantData));
+        let cartItems: MenuItem[] = JSON.parse(sessionStorage.getItem('cart'));
+        // console.log('cartItems are', cartItems);
+        if (!cartItems) {
+          sessionStorage.setItem('cart', JSON.stringify([]));
+        }
+        observable.next(this.getAllRestaurants());
       })
-      sessionStorage.setItem('restaurants', JSON.stringify(this.restaurantData));
-      let cartItems: MenuItem[] = JSON.parse(sessionStorage.getItem('cart'));
-      // console.log('cartItems are', cartItems);
-      if (!cartItems) {
-        sessionStorage.setItem('cart', JSON.stringify([]));
-      }
     })
+
   }
 
-  populateAllOrders() {
-    this.orders = [];
-    let orders = this.afs.firestore.collection(`orders`);
-    orders.get().then((order) => {
-      order.forEach((doc: any) => {
-        let data = doc.data();
-        let docId = doc.id;
-        this.orders.push({ ...data, documentId: docId });
+  populateAllOrders(): Observable<OrderItem[]> {
+    return new Observable((observable) => {
+      this.orders = [];
+      let orders = this.afs.firestore.collection(`orders`);
+      orders.get().then((order) => {
+        order.forEach((doc: any) => {
+          let data = doc.data();
+          let docId = doc.id;
+          this.orders.push({ ...data, documentId: docId });
+        })
+        sessionStorage.setItem('orders', JSON.stringify(this.orders));
+        observable.next(this.getAllOrders());
       })
-      sessionStorage.setItem('orders', JSON.stringify(this.orders));
     })
+
   }
 
   getAllOrders() {
-    return JSON.parse(sessionStorage.getItem('orders'));;
+    const orders = JSON.parse(sessionStorage.getItem('orders'));;
+    return orders ? orders : [];
   }
 
   getAllRestaurants() {
-    return JSON.parse(sessionStorage.getItem('restaurants'));;
+    const restaurants = JSON.parse(sessionStorage.getItem('restaurants'));
+    return restaurants ? restaurants : [];
   }
 
   getRestaurant(restaurantId) {
@@ -128,13 +139,22 @@ export class ListingService {
     return nanoid();
   }
 
-  completeOrder(order) {
-    console.log('this.completeOrder', order);
-    const userOrderRef = this.afs.firestore.collection('orders');
+  completeOrder(order): Observable<OrderItem[]> {
 
-    userOrderRef.doc(order.documentId).update({
-      "status": "completed"
+    return new Observable((observable) => {
+      console.log('this.completeOrder', order);
+      const userOrderRef = this.afs.firestore.collection('orders');
+
+      userOrderRef.doc(order.documentId).update({
+        "status": "completed"
+      }).then((value) => {
+        // console.log('updated order value is', value);
+          this.populateAllOrders().subscribe((value2) => {
+            observable.next(value2);
+          });
+      })
     })
+
   }
 
 }
